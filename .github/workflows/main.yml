@@ -24,7 +24,7 @@ jobs:
         repository: ${{ github.event.pull_request.head.repo.full_name }}
         ref: ${{ github.head_ref }}
 
-    - name: Run Fetch AWS IP Script
+    - name: Run Fetch GCP IP Script
       run: |
         chmod +x fetch-gcp-ip-ranges.sh
         ./fetch-gcp-ip-ranges.sh
