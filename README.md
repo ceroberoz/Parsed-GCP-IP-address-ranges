@@ -4,7 +4,7 @@ GCP IP address ranges from https://www.gstatic.com/ipranges/cloud.json
 
 Parsed per region and IPs (v4 & v6) for convinience.
 
-![alt text](https://github.com/ceroberoz/Parsed-GCP-IP-address-ranges/blob/main/parsed-gcp-ip.jpeg?raw=true)
+![alt text](https://github.com/ceroberoz/Parsed-GCP-IP-address-ranges/blob/main/parsed-gcp-ip-v2.jpeg?raw=true)
 
 IP range checked and updated schedule to run at midnight (UTC time) on daily basis.
 
