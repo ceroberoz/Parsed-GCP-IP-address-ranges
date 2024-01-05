@@ -1,3 +1,5 @@
+[![auto-fetch-runner](https://github.com/ceroberoz/Parsed-GCP-IP-address-ranges/actions/workflows/main.yml/badge.svg)](https://github.com/ceroberoz/Parsed-GCP-IP-address-ranges/actions/workflows/main.yml)
+
 GCP IP address ranges from https://www.gstatic.com/ipranges/cloud.json
 
 Parsed per region and IPs (v4 & v6) for convinience.
