@@ -1,0 +1,40 @@
+name: auto-fetch-runner
+
+on:
+  push:
+    branches:
+      - main
+  pull_request_target:
+  
+  schedule:
+    - cron: '0 0 * * *' # Schedule to run at midnight (UTC time)
+
+jobs:
+  auto-fetch-runner:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.PAT }}
+        repository: ${{ github.event.pull_request.head.repo.full_name }}
+        ref: ${{ github.head_ref }}
+
+    - name: Run Fetch AWS IP Script
+      run: |
+        chmod +x fetch-gcp-ip-ranges.sh
+        ./fetch-gcp-ip-ranges.sh
+
+    - name: Generate dynamic commit message
+      run: |
+        commit_message=$(git diff --name-status)
+        echo "COMMIT_MESSAGE=${commit_message}" >> $GITHUB_ENV
+
+    - name: Commit and push changes
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: ${{ env.COMMIT_MESSAGE }}
