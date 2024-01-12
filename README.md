@@ -26,11 +26,6 @@ curl -fsSL https://raw.githubusercontent.com/ceroberoz/Parsed-GCP-IP-address-ran
 
 # Misc
 
-Need Amazon Web Service with same format? See my other repository 
-
-https://github.com/ceroberoz/Parsed-AWS-IP-address-ranges
-
-
 Need parsed IP of all AWS service per region? See my other repository
 
 https://github.com/ceroberoz/Parsed-AWS-IP-address-ranges
