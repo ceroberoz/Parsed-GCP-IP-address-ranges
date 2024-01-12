@@ -10,7 +10,7 @@ IP range checked and updated schedule to run at midnight (UTC time) on daily bas
 
 ---
 
-Too impatient waiting for daily update? Run fetch-aws-ip-ranges.sh script directly on your Linux / Mac terminal.
+Too impatient waiting for daily update? Run `fetch-aws-ip-ranges.sh` script directly on your Linux / Mac terminal.
 
 Required `curl` and `jq` installed before running Shell below.
 
@@ -23,3 +23,14 @@ Long URL
 ```
 curl -fsSL https://raw.githubusercontent.com/ceroberoz/Parsed-GCP-IP-address-ranges/main/fetch-gcp-ip-ranges.sh | sh
 ```
+
+# Misc
+
+Need Amazon Web Service with same format? See my other repository 
+
+https://github.com/ceroberoz/Parsed-AWS-IP-address-ranges
+
+
+Need parsed IP of all AWS service per region? See my other repository
+
+https://github.com/ceroberoz/Parsed-AWS-IP-address-ranges
